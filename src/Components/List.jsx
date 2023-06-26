@@ -1,5 +1,7 @@
 
-const List = ({ list,search }) => {
+
+
+const List = ({ list,search,onRemove }) => {
   return (
     <div>
       <div className="flex p-5 border-b-2 ">
@@ -49,6 +51,7 @@ const List = ({ list,search }) => {
                   {tar.email}
                 </span>
               </div>
+              <button className="p-2" onClick={() => onRemove(tar.id)}>❌</button>
             </li>
           )
         })}

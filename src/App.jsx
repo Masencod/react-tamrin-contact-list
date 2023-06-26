@@ -14,8 +14,8 @@ function App() {
     //console.log(list.filter(e => e[name].includes(search)))
 
   }, [list,search])
-  const handleRemoveList = () => {
-
+  const handleRemoveList = (data) => {
+    setList(oldArray => oldArray.filter(item => item.id !== data))
   }
   const handleSearch = ({target}) => {
     setSearch(target.value)
