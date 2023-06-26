@@ -11,7 +11,9 @@ function App() {
   }
   useEffect(() => {
     console.log(list)
-  }, [list])
+    //console.log(list.filter(e => e[name].includes(search)))
+
+  }, [list,search])
   const handleRemoveList = () => {
 
   }
@@ -21,7 +23,8 @@ function App() {
   return (
     <>
       <Search onChange={handleSearch}/>
-      <Input onSubmit={handleAddList}/>
+      <Input onSubmit={handleAddList} list={list}/>
+      <List list={list} onRemove={handleRemoveList} search={search}/>
     </>
   )
 }
