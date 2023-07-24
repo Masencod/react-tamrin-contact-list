@@ -8,5 +8,3 @@ const Search = ({ onChange }) => {
 }
 
 export default Search
-
-//test
